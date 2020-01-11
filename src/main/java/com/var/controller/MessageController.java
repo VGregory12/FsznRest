@@ -23,13 +23,13 @@ public class MessageController {
     }
 
     @GetMapping
-    @JsonView(Views.IdName.class)
+//    @JsonView(Views.IdName.class)
     public List<Message> list() {
         return messageRepo.findAll();
     }
 
     @GetMapping("{id}")
-    @JsonView(Views.FullMessage.class)
+//    @JsonView(Views.FullMessage.class)
     public Message getOne(@PathVariable("id") Message message) {
         return message;
     }
